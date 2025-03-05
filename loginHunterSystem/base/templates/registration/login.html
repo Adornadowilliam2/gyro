@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {%block content %}
-<form method="POST">
+<form method="POST" class="border-2 border-black p-2 rounded-lg">
+    <h2 class="text-center text-2xl">Login</h2>
     {%csrf_token%}
     {{form}}
-    <button type="submit">Submit</button>
+    <button type="submit" class="bg-[#007bff] p-2 text-white block m-2">Submit</button>
+    <a href="/signup">No account yet? <span class="text-[#007bff]">Sign up</span></a>
 </form>
 {% endblock content %}
